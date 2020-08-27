@@ -5,6 +5,10 @@ local A = helpers.AddAura
 local Trace = helpers.AddTrace
 local config = AptechkaDefaultConfig
 
+-- config.initialConfigPostHookSnippet = [[
+--     UnregisterUnitWatch(self)
+--     RegisterStateDriver(self, 'visibility', '[mod:shift][combat][@target,exists] show; hide')
+-- ]]
 
 config.TargetStatus = { name = "Target", assignto = "border", color = {0.7,0.2,0.5}, priority = 65 }
 config.MouseoverStatus = { name = "Mouseover", assignto = "border", color = {1,0.5,0.8}, priority = 66 }
