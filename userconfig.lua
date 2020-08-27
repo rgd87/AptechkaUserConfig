@@ -13,12 +13,11 @@ config.LeaderStatus = { name = "Leader", priority = 59, assignto = "LeaderIndica
 config.AssistStatus = { name = "Assist", priority = 59, assignto = "AssistantIndicator", color = {1,.8,.2} }
 
 if playerClass == "DRUID" then
-    --A{ id = 1126,  type = "HELPFUL", assignto = { "bars" }, color = { 235/255 , 145/255, 199/255}, isMissing = true } --Mark of the Wild
-    A{ id = 33763, type = "HELPFUL", assignto = { "spell3", }, showDuration = true, isMine = true, color = { 0.5, 1, 0.5}, } --Lifebloom
-    A{ id = 102351, type = "HELPFUL", assignto = { "spell2" }, priority = 70, color = {38/255, 221/255, 163/255}, isMine = true } --Cenarion Ward
-    --A{ id = 774,   type = "HELPFUL", assignto = { "spell1"}, pulse = true, color = { 1, 0.2, 1}, showDuration = true, isMine = true } --Rejuvenation
-    A{ id = 8936,  type = "HELPFUL", assignto = { "spell3" }, priority = 82, color = { 198/255, 233/255, 80/255}, showDuration = true, isMine = true } --Regrowth
-    A{ id = 48438, type = "HELPFUL", assignto = { "spell5" }, pulse = true, color = { 0.4, 1, 0.4}, priority = 70, showDuration = true, isMine = true } --Wild Growth
+    -- A{ id = 1126,  type = "HELPFUL", assignto = { "bars" }, color = { 235/255 , 145/255, 199/255}, isMissing = true } --Mark of the Wild
+    -- A{ id = 33763, type = "HELPFUL", assignto = { "spell3", }, showDuration = true, isMine = true, color = { 0.5, 1, 0.5}, } --Lifebloom
+    -- A{ id = 102351, type = "HELPFUL", assignto = { "spell2" }, priority = 70, color = {38/255, 221/255, 163/255}, isMine = true } --Cenarion Ward
+    -- A{ id = 774,   type = "HELPFUL", assignto = { "spell1"}, pulse = true, color = { 1, 0.2, 1}, showDuration = true, isMine = true } --Rejuvenation
+    -- A{ id = 8936,  type = "HELPFUL", assignto = { "spell3" }, priority = 82, color = { 198/255, 233/255, 80/255}, showDuration = true, isMine = true } --Regrowth
 end
 
 config.OfflineStatus = { name = "OFFLINE", assignto = { "text2","text3","health","power" }, color = {.15,.15,.15}, textcolor = {1,1,0}, text = "OFFLINE",  priority = 70}
@@ -38,10 +37,6 @@ Aptechka.PostFrameCreate = function(self)
     self.AssistantIndicator:SetTexture([[Interface\GroupFrame\UI-Group-AssistantIcon]])
     self.AssistantIndicator.SetJob = function() end
     self.AssistantIndicator:Hide()
-
-    self.spell4 = config.GridSkin_CreateIndicator(self,6,6,"TOPLEFT",self,"TOPLEFT",0,0)
-
-    self.spell5 = config.GridSkin_CreateIndicator(self,6,6,"RIGHT",self,"RIGHT",0,0)  -- w/h = 6
 end
 
 Aptechka.PostFrameUpdate = function(self)
@@ -55,17 +50,4 @@ Aptechka.PostFrameUpdate = function(self)
     self.raidicon:ClearAllPoints()
     self.raidicon:SetPoint("CENTER",self.health,"TOP",0,0)
     self.raidicon:SetAlpha(0.7)
-
-
-    if self.spell3 then
-        self.spell3:SetWidth(10)
-        self.spell3:SetHeight(10)
-    end
-    if self.spell2 then
-        self.spell2:ClearAllPoints()
-        self.spell2:SetPoint("LEFT",self,"LEFT",0,0)
-    end
-    self.text3:ClearAllPoints()
-    self.text3:SetPoint("CENTER",self,"BOTTOM",0,0)
-
 end
