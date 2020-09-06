@@ -1,4 +1,4 @@
-local helpers = Aptechka.helpers
+local helpers = Aptechka.util or Aptechka.helpers
 local _, playerClass = UnitClass("player")
 local isHealer = (playerClass == "PRIEST" or playerClass == "PALADIN" or playerClass == "SHAMAN" or playerClass == "DRUID")
 local A = helpers.AddAura
