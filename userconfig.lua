@@ -25,8 +25,8 @@ if playerClass == "DRUID" then
     -- A{ id = 8936,  type = "HELPFUL", assignto = set("spell3"), priority = 82, color = { 198/255, 233/255, 80/255}, showDuration = true, isMine = true } --Regrowth
 end
 
-config.OfflineStatus = { name = "OFFLINE", assignto = { "text2","text3","health","power" }, color = {.15,.15,.15}, textcolor = {1,1,0}, text = "OFFLINE",  priority = 70}
-config.AwayStatus = { name = "AFK", assignto = { "text2","text3" }, color = {.15,.15,.15}, textcolor = {0,128,0}, text = "AFK",  priority = 60}
+config.OfflineStatus = { name = "OFFLINE", assignto = set("text2","text3","health","power"), color = {.15,.15,.15}, textcolor = {1,1,0}, text = "OFFLINE",  priority = 70}
+config.AwayStatus = { name = "AFK", assignto = set("text2","text3"), color = {.15,.15,.15}, textcolor = {0,128,0}, text = "AFK",  priority = 60}
 
 Aptechka:RegisterWidget("LeaderIndicator", function(self)
     self.LeaderIndicator = self.health:CreateTexture("$parentLeaderIcon", "OVERLAY", nil, 7)
