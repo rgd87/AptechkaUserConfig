@@ -29,18 +29,20 @@ config.OfflineStatus = { name = "OFFLINE", assignto = set("text2","text3","healt
 config.AwayStatus = { name = "AFK", assignto = set("text2","text3"), color = {.15,.15,.15}, textcolor = {0,128,0}, text = "AFK",  priority = 60}
 
 Aptechka:RegisterWidget("LeaderIndicator", function(self)
-    self.LeaderIndicator = self.health:CreateTexture("$parentLeaderIcon", "OVERLAY", nil, 7)
-    self.LeaderIndicator:SetSize(12, 12)
-    self.LeaderIndicator:SetPoint("LEFT", self.health, "TOPLEFT", 1, 3)
-    self.LeaderIndicator:SetTexture([[Interface\GroupFrame\UI-Group-LeaderIcon]])
-    self.LeaderIndicator:Hide()
+    local LeaderIndicator = self.health:CreateTexture("$parentLeaderIcon", "OVERLAY", nil, 7)
+    LeaderIndicator:SetSize(12, 12)
+    LeaderIndicator:SetPoint("LEFT", self.health, "TOPLEFT", 1, 3)
+    LeaderIndicator:SetTexture([[Interface\GroupFrame\UI-Group-LeaderIcon]])
+    LeaderIndicator:Hide()
+    return LeaderIndicator
 end)
 Aptechka:RegisterWidget("AssistantIndicator", function(self)
-    self.AssistantIndicator = self.health:CreateTexture("$parentAssistIcon", "OVERLAY", nil, 7)
-    self.AssistantIndicator:SetSize(12, 12)
-    self.AssistantIndicator:SetPoint("LEFT", self.health, "TOPLEFT", 1, 3)
-    self.AssistantIndicator:SetTexture([[Interface\GroupFrame\UI-Group-AssistantIcon]])
-    self.AssistantIndicator:Hide()
+    local AssistantIndicator = self.health:CreateTexture("$parentAssistIcon", "OVERLAY", nil, 7)
+    AssistantIndicator:SetSize(12, 12)
+    AssistantIndicator:SetPoint("LEFT", self.health, "TOPLEFT", 1, 3)
+    AssistantIndicator:SetTexture([[Interface\GroupFrame\UI-Group-AssistantIcon]])
+    AssistantIndicator:Hide()
+    return AssistantIndicator
 end)
 
 Aptechka.PostFrameCreate = function(self)
