@@ -49,14 +49,5 @@ Aptechka.PostFrameCreate = function(self)
 end
 
 Aptechka.PostFrameUpdate = function(self)
-    self.roleicon:ClearAllPoints()
-    self.roleicon:SetPoint("CENTER",self.health,"LEFT", 0, -5)
-    self.roleicon:SetWidth(12)
-    self.roleicon:SetHeight(12)
-    self.text1:SetPoint("CENTER",self,"CENTER",0,10)
-    --self.raidicon:SetWidth(12)
-    --self.raidicon:SetHeight(12)
-    self.raidicon:ClearAllPoints()
-    self.raidicon:SetPoint("CENTER",self.health,"TOP",0,0)
-    self.raidicon:SetAlpha(0.7)
+
 end
