@@ -45,6 +45,15 @@ Aptechka:RegisterWidget("AssistantIndicator", function(self)
     return AssistantIndicator
 end)
 
+-- autoProfile - profile that GUI table would want to select
+-- role - "HEALER" or "DAMAGER"
+-- class - e.g. "DRUID"
+-- groupType - Possible types: solo, party, smallRaid, mediumRaid, bigRaid, fullRaid
+-- numMembers - raw number of members
+Aptechka.ProfileLogicFunc = function(autoProfile, role, class, groupType, numMembers)
+    -- return "5man"
+end
+
 Aptechka.PostFrameCreate = function(self)
 end
 
