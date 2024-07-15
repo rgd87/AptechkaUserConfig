@@ -1,4 +1,4 @@
-## Interface: 80300
+## Interface: 110000
 ## Title: AptechkaUserConfig
 ## Notes: Personal settings
 ## Dependencies: Aptechka

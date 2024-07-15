@@ -1,0 +1,5 @@
+## Interface: 40400
+## Title: AptechkaUserConfig
+## Notes: Personal settings
+## Dependencies: Aptechka
+userconfig.lua
